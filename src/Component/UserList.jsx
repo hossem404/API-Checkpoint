@@ -1,6 +1,6 @@
 import React,{useState,useEffect   } from "react";
 import axios from 'axios';
-
+import Table from 'react-bootstrap/Table';
 
 function UserList() {
   const [listofuser,setlistofuser] = useState([])
@@ -16,7 +16,7 @@ function UserList() {
   
     return (
     <div>
-        <table>
+        <Table striped bordered hover >
             <thead>
                 <tr>
                     <th>id</th>
@@ -35,7 +35,10 @@ function UserList() {
                     </tr>
                 ))}
             </tbody>
-        </table>
+        </Table>
+
+
+    
 
 
     </div>
